@@ -30,8 +30,8 @@ public class LevelController : MonoBehaviour{
     void Update(){
         timeLimit -= Time.deltaTime;
         levelUI.ShowScreenTime(timeLimit);
-        if(timeLimit <- 0){
-            
+        if(timeLimit <= 0){
+            GameOver();
         }
     }
     public static void SetScore(int points){
