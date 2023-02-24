@@ -21,6 +21,7 @@ public class LevelUI : MonoBehaviour{
         GameOverScreen.gameObject.SetActive(true);
     }
     public void RestartGame(){
+        Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
     public void BackToMenu(){
