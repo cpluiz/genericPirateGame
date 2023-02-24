@@ -20,12 +20,12 @@ public class LevelController : MonoBehaviour{
 
         if(levelUI == null)
             levelUI = GetComponentInChildren<LevelUI>();
-        totalTime = PlayerPrefs.GetFloat("gameplayTime", 60f);
-        timeLimit = totalTime;
     }
 
     void Start(){
         enemySpawner.StartSpawn();
+        totalTime = PlayerPrefs.GetFloat("gameplayTime", 60f);
+        timeLimit = totalTime;
     }
     void Update(){
         timeLimit -= Time.deltaTime;
