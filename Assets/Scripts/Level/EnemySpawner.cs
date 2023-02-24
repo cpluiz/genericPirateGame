@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour{
     [SerializeField] private BoatController[] enemyPrefabs;
     private Vector2 newPosition;
     public void StartSpawn(){
+        spawnInterval = PlayerPrefs.GetFloat("spawnIntervalTime", 7f);
         StopAllCoroutines();
         StartCoroutine(nameof(SpawnEnemy));
     }
